@@ -412,12 +412,13 @@
       var containerWidth = container.width;
       var containerHeight = container.height;
       var cropBox = this.cropBox;
+      var round = Math.round;
 
-      if (cropBox.width > cropBox.maxWidth || cropBox.width < cropBox.minWidth) {
+      if (round(cropBox.width) > round(cropBox.maxWidth) || round(cropBox.width) < round(cropBox.minWidth)) {
         cropBox.left = cropBox.oldLeft;
       }
 
-      if (cropBox.height > cropBox.maxHeight || cropBox.height < cropBox.minHeight) {
+      if (round(cropBox.height) > round(cropBox.maxHeight) || round(cropBox.height) < round(cropBox.minHeight)) {
         cropBox.top = cropBox.oldTop;
       }
 
